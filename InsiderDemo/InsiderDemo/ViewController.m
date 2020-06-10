@@ -42,12 +42,13 @@
     .setLanguage(@"TR");
     
     // Setting User Identifiers.
-    currentUser.setUserIdentifierWithEmail(@"mobile@useinsider.com")
-    .setUserIdentifierWithUserID(@"CRM-ID")
-    .setUserIdentifierWithPhoneNumber(@"0000");
+    InsiderIdentifiers *identifiers = [[InsiderIdentifiers alloc] init];
+    identifiers.addEmail(@"mobile@useinsider.com")
+    .addPhoneNumber(@"0000")
+    .addUserID(@"CRM-ID");
     
     // Login and Logout
-    [currentUser login];
+    [currentUser login:identifiers];
     [currentUser logout];
     
     // Setting custom attributes.
@@ -91,7 +92,8 @@
     
     // MARK: If any parameter which is passed to this method is nil / null or an empty string, it will return an empty and invalid Insider Product Object. Note that an invalid Insider Product object will be ignored for any product related operations.
     // You can crete Insider Product and add attributes later on it.
-    InsiderProduct *insiderExampleProduct = [Insider createNewProductWithID:@"productID" name:@"productName" taxonomy:@"taxonomy" imageURL:@"imageURL" price:1000.5 currency:@"currency"];
+    NSArray *taxonomy = [NSArray arrayWithObjects: @"taxonomy1", @"taxonomy2", @"taxonomy3", nil];
+    InsiderProduct *insiderExampleProduct = [Insider createNewProductWithID:@"productID" name:@"productName" taxonomy:taxonomy imageURL:@"imageURL" price:1000.5 currency:@"currency"];
     
     // Setting Product Attributes in chainable way.
     insiderExampleProduct.setColor(@"color")
@@ -101,7 +103,6 @@
     .setPromotionDiscount(10.5)
     .setSize(@"size")
     .setSalePrice(10.5)
-    .setSubCategory(@"subCategory")
     .setShippingCost(10.5)
     .setQuantity(10)
     .setStock(10);
@@ -137,13 +138,13 @@
     // --- RECOMMENDATION ENGINE --- //
     
     // ID comes from your smart recommendation campaign.
-    // Please follow the language code structure. For instance tr:TR.
-    [Insider getSmartRecommendationWithID:1 language:@"tr:TR" currency:@"TRY" smartRecommendation:^(NSDictionary *recommendation) {
+    // Please follow the language code structure. For instance tr_TR.
+    [Insider getSmartRecommendationWithID:1 language:@"tr_TR" currency:@"TRY" smartRecommendation:^(NSDictionary *recommendation) {
         // Handle here
         NSLog(@"[INSIDER][getSmartRecommendationWithID]: %@", recommendation);
     }];
     
-    [Insider getSmartRecommendationWithProduct:insiderExampleProduct recommendationID: 1 language:@"tr:TR" smartRecommendation:^(NSDictionary *recommendation) {
+    [Insider getSmartRecommendationWithProduct:insiderExampleProduct recommendationID: 1 language:@"tr_TR" smartRecommendation:^(NSDictionary *recommendation) {
         // Handle Here
         NSLog(@"[INSIDER][getSmartRecommendationWithProduct]: %@", recommendation);
     }];
@@ -155,7 +156,7 @@
     // --- PAGE VISITING --- //
     
     [Insider visitHomepage];
-    [Insider visitListingPageWithTaxonomy:@"taxonomy"];
+    [Insider visitListingPageWithTaxonomy:taxonomy];
     
     NSArray *insiderExampleProducts = [NSArray arrayWithObjects: insiderExampleProduct, insiderExampleProduct, nil];
     [Insider visitCartPageWithProducts:insiderExampleProducts];
