@@ -32,6 +32,8 @@ static NSString *INSIDER_PARTNER_NAME = @"yourpartnername";
     [Insider registerWithQuietPermission:false];
     [Insider registerInsiderCallbackWithSelector:@selector(insiderCallback:) sender:self];
     [Insider enableAppTracker:true];
+    [Insider enableIDFACollection:false];
+    [Insider getCurrentUser].setLocale(@"tr_TR");
     
     // You need to have required permissions in order to have location information from the user.
     // MARK: Please add required permissons to your info.plist.
