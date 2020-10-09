@@ -39,13 +39,15 @@
     .setLocationOptin(true)
     .setFacebookID(@"Facebook-ID")
     .setTwitterID(@"Twittter-ID")
-    .setLanguage(@"TR");
+    .setLanguage(@"TR")
+    .setLocale(@"tr_TR");
     
     // Setting User Identifiers.
     InsiderIdentifiers *identifiers = [[InsiderIdentifiers alloc] init];
     identifiers.addEmail(@"mobile@useinsider.com")
-    .addPhoneNumber(@"0000")
-    .addUserID(@"CRM-ID");
+    .addPhoneNumber(@"+901234567")
+    .addUserID(@"CRM-ID")
+    .addCustomIdentifier(@"key", @"value");
     
     // Login and Logout
     [currentUser login:identifiers];
@@ -68,13 +70,13 @@
     
     // You can create an event without parameters and call the build method
     [[Insider tagEvent:@"first_event"] build];
-
+    
     // You can create an event then add parameters and call the build method
     [[Insider tagEvent:@"second_event"].addParameterWithInt(@"int_parameter", 10) build];
-
+    
     // You can create an object and add the parameters later
     InsiderEvent *insiderExampleEvent = [Insider tagEvent:@"third_event"];
-
+    
     insiderExampleEvent.addParameterWithString(@"string_parameter", @"This is Insider.")
     .addParameterWithInt(@"int_parameter", 10)
     .addParameterWithDouble(@"double_parameter", 20.5)
@@ -120,7 +122,7 @@
     
     
     // --- REVENUE TRACKING --- //
-
+    
     [Insider itemPurchasedWithSaleID:@"uniqueSaleID" product:insiderExampleProduct];
     
     // --- CART REMINDER --- //
@@ -189,6 +191,12 @@
     // Integer
     int contentOptimizerInt = [Insider getContentIntWithName:@"int_variable_name" defaultInt:10 dataType:ContentOptimizerDataTypeElement];
     NSLog(@"[INSIDER][getContentBoolWithName]: %d", contentOptimizerInt);
+    
+    // --- SEARCH API --- //
+    
+    [Insider getSearchData:@"keyword" currency:@"currency" searchResult:^(NSDictionary *result) {
+        //  Handle here
+    }];
     
 }
 

@@ -19,7 +19,7 @@ static NSString *APP_GROUP = @"group.com.useinsider.InsiderDemo";
 
 // FIXME: Please change with your partner name.
 // Make sure that all the letters are lowercase.
-static NSString *INSIDER_PARTNER_NAME = @"yourpartnername";
+static NSString *INSIDER_PARTNER_NAME = @"your_partner_name";
 
 // FIXME: Please change your URL Types to your partner name with insider prefix.
 // URL Type which identifier is Insider and URL Schemes is your Insider Partner Name with insider prefix.
