@@ -51,6 +51,12 @@
     
     // Login and Logout
     [currentUser login:identifiers];
+    
+    [currentUser login:identifiers insiderIDResult:^(NSString *insiderID) {
+        //  Handle here
+        NSLog(@"[INSIDER][insiderIDResult]: %@", insiderID);
+    }];
+    
     [currentUser logout];
     
     // Setting custom attributes.
@@ -141,12 +147,12 @@
     
     // ID comes from your smart recommendation campaign.
     // Please follow the language code structure. For instance tr_TR.
-    [Insider getSmartRecommendationWithID:1 language:@"tr_TR" currency:@"TRY" smartRecommendation:^(NSDictionary *recommendation) {
+    [Insider getSmartRecommendationWithID:1 locale:@"tr_TR" currency:@"TRY" smartRecommendation:^(NSDictionary *recommendation) {
         // Handle here
         NSLog(@"[INSIDER][getSmartRecommendationWithID]: %@", recommendation);
     }];
     
-    [Insider getSmartRecommendationWithProduct:insiderExampleProduct recommendationID: 1 language:@"tr_TR" smartRecommendation:^(NSDictionary *recommendation) {
+    [Insider getSmartRecommendationWithProduct:insiderExampleProduct recommendationID: 1 locale:@"tr_TR" smartRecommendation:^(NSDictionary *recommendation) {
         // Handle Here
         NSLog(@"[INSIDER][getSmartRecommendationWithProduct]: %@", recommendation);
     }];
@@ -194,8 +200,9 @@
     
     // --- SEARCH API --- //
     
-    [Insider getSearchData:@"keyword" currency:@"currency" searchResult:^(NSDictionary *result) {
+    [Insider getSearchData:@"keyword" currency:@"currency" locale:@"tr_TR" searchResult:^(NSDictionary *result) {
         //  Handle here
+        NSLog(@"[INSIDER][getSearchData]: %@", result);
     }];
     
 }
