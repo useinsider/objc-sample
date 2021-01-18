@@ -46,16 +46,10 @@
     InsiderIdentifiers *identifiers = [[InsiderIdentifiers alloc] init];
     identifiers.addEmail(@"mobile@useinsider.com")
     .addPhoneNumber(@"+901234567")
-    .addUserID(@"CRM-ID")
-    .addCustomIdentifier(@"key", @"value");
+    .addUserID(@"CRM-ID");
     
     // Login and Logout
     [currentUser login:identifiers];
-    
-    [currentUser login:identifiers insiderIDResult:^(NSString *insiderID) {
-        //  Handle here
-        NSLog(@"[INSIDER][insiderIDResult]: %@", insiderID);
-    }];
     
     [currentUser logout];
     
