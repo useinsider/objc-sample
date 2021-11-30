@@ -3,7 +3,7 @@
 //  InsiderDemo
 //
 //  Created by Insider on 30.03.2020.
-//  Copyright © 2020 Insider. All rights reserved.
+//  Copyright © 2021 Insider. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -31,7 +31,6 @@ static NSString *INSIDER_PARTNER_NAME = @"your_partner_name";
     [Insider initWithLaunchOptions:launchOptions partnerName:INSIDER_PARTNER_NAME appGroup:APP_GROUP];
     [Insider registerWithQuietPermission:false];
     [Insider registerInsiderCallbackWithSelector:@selector(insiderCallback:) sender:self];
-    [Insider enableAppTracker:true];
     [Insider enableIDFACollection:false];
     [Insider getCurrentUser].setLocale(@"tr_TR");
     
