@@ -191,14 +191,6 @@
     // Integer
     int contentOptimizerInt = [Insider getContentIntWithName:@"int_variable_name" defaultInt:10 dataType:ContentOptimizerDataTypeElement];
     NSLog(@"[INSIDER][getContentBoolWithName]: %d", contentOptimizerInt);
-    
-    // --- SEARCH API --- //
-    
-    [Insider getSearchData:@"keyword" currency:@"currency" locale:@"tr_TR" searchResult:^(NSDictionary *result) {
-        //  Handle here
-        NSLog(@"[INSIDER][getSearchData]: %@", result);
-    }];
-    
 }
 
 
