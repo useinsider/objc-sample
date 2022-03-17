@@ -20,6 +20,8 @@
 		561B1B6C24329E8D00C25372 /* NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 561B1B6B24329E8D00C25372 /* NotificationViewController.m */; };
 		561B1B6F24329E8D00C25372 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561B1B6D24329E8D00C25372 /* MainInterface.storyboard */; };
 		561B1B7324329E8D00C25372 /* InsiderNotificationContent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 561B1B6324329E8D00C25372 /* InsiderNotificationContent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F42AD0E827E391D4008E40DE /* BuildFile in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F42AD0EB27E391DA008E40DE /* BuildFile in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,28 @@
 				561B1B5A24329E7800C25372 /* InsiderNotificationService.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F42AD0E927E391D4008E40DE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F42AD0E827E391D4008E40DE /* BuildFile in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F42AD0EC27E391DB008E40DE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F42AD0EB27E391DA008E40DE /* BuildFile in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -217,6 +241,7 @@
 				561B1B4E24329E7800C25372 /* Sources */,
 				561B1B4F24329E7800C25372 /* Frameworks */,
 				561B1B5024329E7800C25372 /* Resources */,
+				F42AD0EC27E391DB008E40DE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -234,6 +259,7 @@
 				561B1B5F24329E8D00C25372 /* Sources */,
 				561B1B6024329E8D00C25372 /* Frameworks */,
 				561B1B6124329E8D00C25372 /* Resources */,
+				F42AD0E927E391D4008E40DE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
