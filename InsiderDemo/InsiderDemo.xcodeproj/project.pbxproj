@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,8 +20,8 @@
 		561B1B6C24329E8D00C25372 /* NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 561B1B6B24329E8D00C25372 /* NotificationViewController.m */; };
 		561B1B6F24329E8D00C25372 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561B1B6D24329E8D00C25372 /* MainInterface.storyboard */; };
 		561B1B7324329E8D00C25372 /* InsiderNotificationContent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 561B1B6324329E8D00C25372 /* InsiderNotificationContent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		F42AD0E827E391D4008E40DE /* BuildFile in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F42AD0EB27E391DA008E40DE /* BuildFile in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F42AD0E827E391D4008E40DE /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F42AD0EB27E391DA008E40DE /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +60,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F42AD0E827E391D4008E40DE /* BuildFile in Embed Frameworks */,
+				F42AD0E827E391D4008E40DE /* (null) in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,7 +71,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F42AD0EB27E391DA008E40DE /* BuildFile in Embed Frameworks */,
+				F42AD0EB27E391DA008E40DE /* (null) in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -579,7 +579,7 @@
 		561B1B5C24329E7800C25372 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_ENTITLEMENTS = InsiderNotificationService/InsiderNotificationService.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2VDL6UCH4J;
@@ -600,7 +600,7 @@
 		561B1B5D24329E7800C25372 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_ENTITLEMENTS = InsiderNotificationService/InsiderNotificationService.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2VDL6UCH4J;
@@ -621,7 +621,7 @@
 		561B1B7524329E8D00C25372 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_ENTITLEMENTS = InsiderNotificationContent/InsiderNotificationContent.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2VDL6UCH4J;
@@ -642,7 +642,7 @@
 		561B1B7624329E8D00C25372 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_ENTITLEMENTS = InsiderNotificationContent/InsiderNotificationContent.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2VDL6UCH4J;
