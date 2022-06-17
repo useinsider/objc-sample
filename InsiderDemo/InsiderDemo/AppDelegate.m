@@ -29,6 +29,7 @@ static NSString *INSIDER_PARTNER_NAME = @"your_partner_name";
     UNUserNotificationCenter.currentNotificationCenter.delegate = self;
     
     [Insider initWithLaunchOptions:launchOptions partnerName:INSIDER_PARTNER_NAME appGroup:APP_GROUP];
+    [Insider setActiveForegroundPushView];
     [Insider registerWithQuietPermission:false];
     [Insider registerInsiderCallbackWithSelector:@selector(insiderCallback:) sender:self];
     [Insider enableIDFACollection:false];
