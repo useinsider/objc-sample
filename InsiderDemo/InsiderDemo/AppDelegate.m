@@ -53,18 +53,6 @@ static NSString *INSIDER_PARTNER_NAME = @"your_partner_name";
             [self showAlert:dict withTitle:@"InsiderCallbackTypeNotificationOpen"];
             NSLog(@"[INSIDER][CALLBACK][InsiderCallbackTypeNotificationOpen]: %@", dict);
             break;
-        case InsiderCallbackTypeInappButtonClick:
-            [self showAlert:dict withTitle:@"InsiderCallbackTypeInappButtonClick"];
-            NSLog(@"[INSIDER][CALLBACK][InsiderCallbackTypeInappButtonClick] %@", dict);
-            break;
-        case InsiderCallbackTypeTempStorePurchase:
-            [self showAlert:dict withTitle:@"InsiderCallbackTypeTempStorePurchase"];
-            NSLog(@"[INSIDER][CALLBACK][InsiderCallbackTypeTempStorePurchase]: %@", dict);
-            break;
-        case InsiderCallbackTypeTempStoreAddedToCart:
-            [self showAlert:dict withTitle:@"InsiderCallbackTypeTempStoreAddedToCart"];
-            NSLog(@"[INSIDER][CALLBACK][InsiderCallbackTypeTempStoreAddedToCart]: %@", dict);
-            break;
         case InsiderCallbackTypeTempStoreCustomAction:
             [self showAlert:dict withTitle:@"InsiderCallbackTypeTempStoreCustomAction"];
             NSLog(@"[INSIDER][CALLBACK][InsiderCallbackTypeTempStoreCustomAction]: %@", dict);
